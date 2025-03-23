@@ -6,9 +6,31 @@
     background-color: #161418;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
 } */
-
  /* ---------------colour for routes------------ */
+/* Show navbar when class is toggled */
 
+.routes.show {
+  visibility: visible;
+}
+/* Style the toggle button */
+.toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Close Button Styling */
+.text-black i {
+  cursor: pointer;
+  font-size: 24px;
+}
 body 
 {
  min-height: 100vh;
@@ -87,10 +109,11 @@ nav ul li
 
 .routes
 {
+  display: flex;
   height: 100vh; /* Full height */
   top: 0;
   left: 0;
-  display: flex;
+  visibility: hidden;
   flex-direction: column;
   padding: 10px;
   margin: 5px 5px;
@@ -213,6 +236,8 @@ nav ul li.active::after {
   }
 }
  
+
+
 
 
 

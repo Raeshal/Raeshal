@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isNavbarVisible = false;
   title = 'Resume';
   remove:boolean=true
   ngAfterViewInit(): void {
@@ -22,6 +23,7 @@ export class AppComponent {
     });
   }
 
+
     navItems.forEach((item) => {
       item.addEventListener('click', function () {
         // Remove "active" class from all items
@@ -32,6 +34,5 @@ export class AppComponent {
       });
     });
   }
-
 
 }
