@@ -1,111 +1,40 @@
-/* Flip Card Container */
-.flip-card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-  perspective: 1000px;
+.profile-section {
+  min-height: 87vh;
 }
 
-/* Flip Card */
-.flip-card {
-  width: 40rem;
+
+
+.profile-image-wrapper {
+  flex-shrink: 0;
+}
+.profile-img {
+  width: 25rem;
   height: 25rem;
-  border-radius: 15px;
-  background: transparent;
+  border-radius: 50%;
+  object-fit: cover;
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
+  padding: 5px;
+  background: linear-gradient(135deg, #00f0ff, #9b5cff);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), 0 0 25px rgba(155, 92, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.flip-card-inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform: rotateY(0deg);
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
+.profile-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.6), 0 0 40px rgba(155, 92, 255, 0.6);
 }
 
-/* Front & Back Side */
-.flip-card-front,
-.flip-card-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.profile-info h1 {
+
+  font-size: 3.5rem;
+  color: #2071a9;
 }
 
-/* Front Side */
-.flip-card-front {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: white;
-}
-.flip-card-back {
-  background: #ffffff;
-  transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Content Box */
-.content {
-  max-width: 90%;
-}
-
-/* Title */
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #6a11cb;
-  margin-bottom: 10px;
-}
-
-/* Text Styling */
-.description, .experience {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
-/* Highlighted Name */
-.highlight {
-  color: #2575fc;
-  font-weight: bold;
-}
-
-/* Resume Download Button */
-.btn-custom {
-  display: inline-block;
-  padding: 10px 15px;
-  margin-top: 12px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: white;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-custom:hover {
-  background: linear-gradient(135deg, #2575fc, #6a11cb);
-  transform: scale(1.05);
-}
-
-/* Flip Effect on Hover */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.category-pill {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: default;
 }

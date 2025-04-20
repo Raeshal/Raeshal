@@ -12,6 +12,7 @@ import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ExpertiseComponent } from './expertise/expertise.component';
 import { ConnectComponent } from './connect/connect.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ConnectComponent } from './connect/connect.component';
     ProjectsComponent,
     ExpertiseComponent,
     ConnectComponent,
+    SideNavComponent,
     
     
 

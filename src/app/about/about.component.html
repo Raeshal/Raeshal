@@ -1,22 +1,53 @@
+<div class="container py-5">
+    <div class="row align-items-center">
+        <!-- Left Column (Content) -->
+        <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="display-3 text-primary mb-4">About Me</h1>
+            <p class="lead mb-4 text-muted">
+                Hi, I'm Reshil Khurana! I'm a passionate Front-End Developer with a love for building dynamic, user-centric web applications. Let me walk you through my journey and some of the exciting things I’ve worked on.
+            </p>
 
-<div class=" abt-one m-5">
-    <div>
-        <label class=" display-1">Me</label>
-            <h4>In my journey as a developer, I've had the privilege of working on
-                <br>
-                diverse Angular projects where I had the chance to design, develop, 
-                and maintain user-friendly web applications & dashboards whether it is timesheet-entry or displaying data in highcharts & piecharts . I've gained hands-on experience in building responsive
-                and dynamic user interfaces, using the latest features of Angular and best practices for code optimization. Additionally, 
-                I have a strong foundation in HTML, CSS, and JavaScript, 
-                which allows me to create seamless and visually appealing web experiences.</h4>      
-    </div>
-    <div>
-            <!-- Resume Download Button -->
-           <a href="assets/Raeshal_Khurana_Resume.pdf" download="Raeshal-Khurana-Resume.pdf" class="btn btn-secondary shadow mt-3">
-            📄 Download Resume
-        </a>
-    </div>
-         
- </div>  
+            <!-- Interactive Skillset Section -->
+            <h4 class="mb-3 text-primary">My Skills</h4>
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <img src="assets/react-logo.png" alt="React" class="skill-logo" onclick="showSkill('react')" />
+                </div>
+                <div class="col-3">
+                    <img src="assets/html-logo.png" alt="HTML" class="skill-logo" onclick="showSkill('html')" />
+                </div>
+                <div class="col-3">
+                    <img src="assets/css-logo.png" alt="CSS" class="skill-logo" onclick="showSkill('css')" />
+                </div>
+                <div class="col-3">
+                    <img src="assets/js-logo.png" alt="JavaScript" class="skill-logo" onclick="showSkill('js')" />
+                </div>
+            </div>
 
- 
+            <div id="skillDescription" class="mt-3 text-muted" style="display:none;">
+                <p id="reactDesc" style="display:none;">
+                    <strong>React:</strong> Building interactive UIs with React, utilizing hooks, state management, and component-based architecture.
+                </p>
+                <p id="htmlDesc" style="display:none;">
+                    <strong>HTML:</strong> Mastering semantic HTML to ensure accessibility, SEO optimization, and clean code structure.
+                </p>
+                <p id="cssDesc" style="display:none;">
+                    <strong>CSS:</strong> Styling elegant, responsive websites using modern CSS techniques like Flexbox, Grid, and animations.
+                </p>
+                <p id="jsDesc" style="display:none;">
+                    <strong>JavaScript:</strong> Crafting dynamic, interactive web experiences using vanilla JS, ES6+, and advanced features.
+                </p>
+            </div>
+
+            <!-- Download Resume Button -->
+            <a href="assets/Raeshal_Khurana_Resume.pdf" download="Raeshal-Khurana-Resume.pdf" class="btn btn-info btn-lg shadow mt-4">
+                <i class="bi bi-download"></i> Download My Resume
+            </a>
+        </div>
+
+        <!-- Right Column (Image or Avatar) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+            <img src="assets/profile-image.jpg" alt="Reshil Khurana" class="img-fluid rounded-circle shadow-lg" style="max-width: 70%; height: auto;">
+        </div>
+    </div>
+</div>

@@ -1,36 +1,122 @@
-
-.text
-{
-    color: rgb(12, 10, 10);
-    border-right: 5px solid;
-    white-space: nowrap;
-    overflow: hidden;
-    /* animation: 
-    typing 5s steps(18),
-    cursor .2s step-end infinite alternate; */
-    animation: typing 15s steps(23) infinite, cursor 10s infinite;
-    animation-fill-mode:forwards
-
+ /* General Section Styling */
+ .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
-@keyframes cursor
-{
-    0% { width:0 }
-  25% { width: 70% }
-  48% { width: 100% }
-  50% { width: 100% }
-  55% { width: 100% }
-  75% { width: 70%; }
-  85% { width: 30%; }
-  100% { width: 0; }
-}
-@keyframes typing {
 
-    from { 
-        width: 0
+.text-center {
+    text-align: center;
+}
+
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Left and Right Timeline Items */
+.timeline-item.left .timeline-content {
+    left: 0;
+    animation: fadeInLeft 1s ease;
+}
+
+.timeline-item.right .timeline-content {
+    right: 0;
+    animation: fadeInRight 1s ease;
+}
+
+/* Timeline Content Styling */
+.timeline-content {
+    background: #fff;
+    border: 2px solid #007bff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+    transform: translateY(-10px);
+}
+
+.timeline-content h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Timeline Line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #007bff;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+/* Fade-in Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
     }
-    
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
-h1
-{
-    max-width: fit-content;
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 90%;
+    }
+
+    .timeline::before {
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .display-3 {
+        font-size: 2rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.25rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
 }

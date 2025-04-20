@@ -1,249 +1,49 @@
-
-
-/* .bd-navbar {
-  display: block;
-    min-width: 4rem;
-    background-color: #161418;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
-} */
- /* ---------------colour for routes------------ */
-/* Show navbar when class is toggled */
-
-.routes.show {
-  visibility: visible;
-}
-/* Style the toggle button */
-.toggle-btn {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  background-color: #000;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-/* Close Button Styling */
-.text-black i {
-  cursor: pointer;
-  font-size: 24px;
-}
-body 
-{
- min-height: 100vh;
- background-color: #524f4a; /* Golden color */
- background-image:
- linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) -10px -10px,
- linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 10px 10px,
- linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 0 20px,
- linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 20px 0,
- linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 0 40px,
- linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 40px 0;
-background-size: 50px 50px;
-background-position: 0 0, 25px 25px, 50px 50px, 75px 75px, 100px 100px, 125px 125px; /* Adjust position as needed */
-animation: sprinkle 2s infinite linear;
-}
-
-@keyframes sprinkle {
-to {
- background-position: 25px 25px, 50px 50px, 75px 75px, 100px 100px, 125px 125px, 150px 150px;
-}
-}
-.cover{
-  display: grid;
-  grid-template-columns: 1fr 7fr;
-  /* min-height: 100vh; */
-  /* background-color: white; */
-   
-}
-/* .sidenav
-{
-  height: 100%;
-width: 160px;
-position: fixed;
-z-index: 1;
-top: 0;
-left: 0;
-background-color:  #161418;
-overflow-x: hidden;
-padding-top: 20px;
-}
- */
-
-nav{
-  
-  box-shadow: 50px 30px 10px -2px rgba(0,0,0,0.4);
-
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px !important;
-
-}
-
-li a {
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-
-nav ul li 
-{
-  list-style: none;
-  display: block;
-  font-weight: 500;
-  color: #777;
-  cursor: pointer;
+/* Wrapper to hold full layout */
+.app-wrapper {
+  min-height: 100vh;
   position: relative;
-  z-index: 2;
-  transition: color 0.5s;
 }
 
-
-.routes
-{
-  display: flex;
-  height: 100vh; /* Full height */
+/* Top header/navbar */
+.top-nav {
+  position: fixed;
   top: 0;
   left: 0;
-  visibility: hidden;
-  flex-direction: column;
-  padding: 10px;
-  margin: 5px 5px;
+  right: 0;
+  background-color: #161418;
+  z-index: 1000;
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
- 
-.container {
-  color: #e5e5e5;
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 30px 30px 10px -2px rgba(0,0,0,0.4);
+/* Close icon */
+.close-icon i {
+  font-size: 24px;
+  color: #fff;
 }
 
-
-
-nav ul li 
-{
-    list-style: none;
-   
-    color: #777;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-    transition: color 0.5s;
-}
-nav ul li::after
-{
-    content: ' ';
-    background: #f44566;
-    width: 70%;
-    height: 100%;
-    border-radius: 30px;
-    position: absolute;
-    top: 100%;
-    left: 32%;
-    transform: translate(-50% , -50%);
-    z-index: -1;
-    opacity: 0;
-   
-}
-nav ul li:hover
-{
-   color: #868181;
-}
-nav ul li:hover::after
-{
-    top: 50%;
-    opacity: 1;
-    
-
-}
-/* Active Class (Keeps the effect after click) */
-nav ul li.active {
-  color: #f44566;
+/* Sidebar nav */
+.side-nav {
+  position: fixed;
+  top: 60px; /* below header */
+  left: 0;
+  height: calc(100vh - 60px);
+  width: 220px;
+  background-color: #222;
+  z-index: 999;
+  overflow-y: auto;
 }
 
-nav ul li.active::after {
-  top: 50%;
-  opacity: 1;
+/* Main content area */
+.routes-area {
+  margin-top: 60px; /* below header */
+  margin-left: 0;
+  padding: 20px;
 }
 
-.rendered
-{
-  height: 100vh;
-  overflow-y: auto; /* Enable vertical scrolling */
-  background-size:cover;
-  background: 
-    radial-gradient(
-      farthest-side at bottom left,
-      rgba(10, 8, 10, 0.5), 
-      transparent 
-    ),
-    radial-gradient(
-      farthest-corner at bottom right,
-      rgba(15, 15, 15, 0.5), 
-      transparent 400px
-    );
-
-
-
-
-    animation: pulse 5s infinite;
-
-
-  
-}
-/* Optional: Style the scrollbar for better visibility */
-.rendered::-webkit-scrollbar {
-  width: 12px; /* Adjust width of the scrollbar */
-}
-
-.rendered::-webkit-scrollbar-thumb {
-  background: #888; /* Scrollbar color */
-  border-radius: 4px; /* Rounded edges */
-}
-
-.rendered::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Darker color when hovered */
-}
- @keyframes pulse {
-  0% {
-    background-color: #777373;
-  }
-  25%
-  {
-    background-color: #777375;
-
-  }
-  50%{
-
-    background-color: #af8d9e;
-  }
-  75%
-  {
-    background-color: #e281b2;
-  }
-  100% {
-    background-color: #4b4a4a;
+/* If sidebar is visible, push main content */
+@media (min-width: 768px) {
+  .routes-area {
+    margin-left: 220px;
   }
 }
- 
-
-
-
-
-
-
-
-
-
-
-

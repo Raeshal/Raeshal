@@ -1,46 +1,33 @@
+<!-- landing.component.html -->
 
-  <!-- <div class="flip-card mt-5 container1" >
-     <div class="flip-card-inner position-relative  w-300">
-       <div class="flip-card-front w-100 position-absolute">
-         <h1 class="display-2 text-black mt-5">Who am I?</h1>
-       </div>
-       <div class="flip-card-back position-absolute container1 m-5" style="background-color: rgb(194, 157, 228); border: solid rgb(28, 14, 216) 2px;">
-        <h4 class="ms-2 me-2 mt-2" style="font-size: larger ;">Hello, I'm RAESHAL KHURANA, an experienced Angular developer with 
-          a passion for crafting elegant and robust web applications. <br> Over the past {{years}} years, 
-          I've honed my skills in front-end development and have had the opportunity to work on various
-          projects that have enriched my expertise in Angular.</h4>  
-        
-       </div>
-      
-     </div>
+<div class="profile-section container py-5 d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-md-start">
+  <!-- Profile Image -->
+  <div class="profile-image-wrapper mb-4 mb-md-0 me-md-5">
+    <img src="assets/pic2.jpg" alt="Raeshal Khurana" class="profile-img shadow-lg" />
+  </div>
 
-     
-   </div> -->
-   <div class="flip-card-container">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <!-- Front Side -->
-        <div class="flip-card-front">
-          <h1 class="display-2 text-white">Who Am I?</h1>
-        </div>
-  
-        <!-- Back Side -->
-        <div class="flip-card-back">
-          <div class="content">
-            <h4 class="title">👋 Hello, I'm <span class="highlight">Raeshal Khurana</span></h4>
-            <p class="description">
-              💻 Experienced Angular Developer with a passion for building <strong>responsive, dynamic, and elegant</strong> web applications.
-            </p>
-            <p class="experience">
-              📅 With <strong>{{years}}</strong> years of experience, I've worked on diverse projects, refining my expertise in front-end technologies.
-            </p>
-            <a href="assets/Raeshal_Khurana_Resume.pdf" download class="btn btn-custom">
-              📄 Download My Resume
-            </a>
-          </div>
-        </div>
-        
-      </div>
+  <!-- Profile Details -->
+  <div class="profile-info">
+    <h1 class="fw-bold ">Raeshal Khurana</h1>
+    <h5 class="text-muted mb-3">A Bit About Me</h5>
+    <p class="text-secondary mb-4">
+      Hey there! I'm a front-end enthusiast with 4+ years of experience turning ideas into beautiful, functional web apps. I specialize in Angular, but I’ve also spent good time working with React — so yeah, I'm pretty flexible when it comes to frameworks 😉
+      <br>I absolutely love building clean, responsive, and scalable interfaces that not only look good but also feel good to use. Whether it’s crafting dashboards, solving complex UI challenges, or making tiny pixel-perfect tweaks — I'm all in!     
+      <br>Over the years, I’ve worked on everything from corporate portals to smart dashboards, gaining hands-on experience in HTML, CSS, TypeScript, Angular, React, and a bunch of cool libraries (yep, even Highcharts for data stuff 🎯). 
+      I'm a big fan of clean code, performance optimization, and creating user experiences that actually make people go "wow".   
+      <br>When I’m not coding, I’m probably scrolling through design inspo, testing out UI animations for fun, or just silently judging websites with bad UX 😅 
+    </p>
+
+    <!-- Category buttons -->
+    <div class="category-buttons d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
+      <a href="assets/Raeshal_Khurana_Resume.pdf" download class="category-pill bg-success text-white text-decoration-none">
+        📄 Resume
+      </a>      
+      <a routerLink="/projects" class="category-pill bg-info text-white text-decoration-none">
+        🚀 Projects
+      </a>      
+      <span class="category-pill bg-primary text-white">Overview</span>
+      <span class="category-pill bg-secondary text-white">Personal</span>
     </div>
   </div>
-  
+</div>

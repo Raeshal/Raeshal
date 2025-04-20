@@ -1,44 +1,148 @@
-.connect
-{
-    min-height: auto;
-    min-width: auto;
+body {
+  background: linear-gradient(145deg, #1e3c72, #2a5298);
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  height: 100vh;
+  margin: 0;
 }
 
+/* Container Styling */
+.connect-container {
+  max-width: 600px;
+  margin: -20px auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
+/* Heading */
+.connect-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #00d4ff;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+/* Contact Info */
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.contact-info a {
+  color: #00d4ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Form Fields */
+.form-control {
+  background-color: #333;
+  border: 1px solid #00d4ff;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: #444;
+  border-color: #00d4ff;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #00d4ff;
+  color: #111;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.5);
+}
+
+.submit-btn:hover {
+  background-color: #009bb3;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(0, 212, 255, 0.6);
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  margin: 10px;
+  background-color: #00d4ff;
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.5);
+}
+
+.social-btn:hover {
+  background-color: #009bb3;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(0, 212, 255, 0.6);
+}
+
+.social-btn.linkedin {
+  background-color: #0077b5;
+}
+
+.social-btn.github {
+  background-color: #333;
+}
+
+/* Hover effects for social buttons */
+.social-btn.linkedin:hover {
+  background-color: #005f79;
+}
+
+.social-btn.github:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .connect-container {
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  
-  h1 {
-    text-align: center;
-    color: #333;
+
+  .connect-title {
+    font-size: 2rem;
   }
-  
-  .contact-info {
-    margin-bottom: 20px;
+
+  .social-btn {
+    font-size: 1rem;
+    padding: 10px 25px;
   }
-  
-  .contact-info p {
-    margin: 5px 0;
-    font-size: 16px;
+
+  .form-control {
+    padding: 12px;
   }
-  
-  .social-links a {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .social-links a:hover {
-    background-color: #0056b3;
-  }
+}

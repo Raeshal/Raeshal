@@ -7,7 +7,7 @@ import { AboutComponent } from './about/about.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isNavbarVisible = false;
+  isNavbarVisible :boolean = false;
   title = 'Resume';
   remove:boolean=true
   ngAfterViewInit(): void {

@@ -1,84 +1,107 @@
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .w-300
-  {
-    width: 300px !important;
-  }
-  .h-200
-  {
-    height: 200px !important;
-  }
-  
-/* Front & Back Side */
-.flip-card-front,
-.flip-card-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+/* Body and Container Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back ,  .flip-card-back2 {
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    /* background-color:rgb(230, 142, 142); */
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .flip-card-back2 {
-    /* background-color:rgb(175, 139, 139); */
-    color: white;
-    transform: rotateY(180deg);
-  }
-  
-  .econtain
-  {
-   display: flex;
-   flex-direction: column;
+/* Container and Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #3498db;
+  font-weight: 500;
+}
+
+/* Cards Section */
+.experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+/* Individual Card Styling */
+.card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 45%;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-header {
+  background-color: #2c2c2c;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-header h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #f39c12;
+}
+
+.card-header .duration {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+/* Card Body Styling */
+.card-body {
+  padding: 25px;
+}
+
+.card-body .role {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+.card-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-body ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #bdc3c7;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .card {
+      width: 100%;
   }
 
-  ul{
-    list-style: circle;
-    text-decoration: wavy;
-    
-    
+  h2 {
+      font-size: 2rem;
   }
-  .scrollable-element
-  {
-    scrollbar-3dlight-color: blue;
-    scroll-behavior: smooth;
-    scrollbar-gutter: stable both-edges;
+}
 
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
   }
+  to {
+      opacity: 1;
+  }
+}
